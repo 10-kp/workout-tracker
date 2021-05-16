@@ -1,0 +1,27 @@
+{
+  "name": "workout-tracker",
+  "version": "1.0.0",
+  "description": "View, create and track daily workouts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeders/seed.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10-kp/workout-tracker.git"
+  },
+  "author": "Kp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10-kp/workout-tracker/issues"
+  },
+  "homepage": "https://github.com/10-kp/workout-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.9",
+    "morgan": "^1.10.0"
+  }
+}
