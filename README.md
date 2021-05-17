@@ -4,6 +4,7 @@
 
 - [Installation](#installation)
 - [Technologies Used](#technologies)
+- [Steps](#steps)
 - [Link](#Link)
 - [License](#license)
 
@@ -28,12 +29,26 @@ The following steps were undertaken to create this program
   ## Technologies
 
   - Express
-  - Mongoose
-  - Morgan
+  - Mongoose npm
+  - Morgan npm
+  - Node.js
+  - MongoDB
+  - Heroku
+
+  ## Steps
+
+  Step-by-step for creating this program.
+
+  - Create server.js file
+  - Create a route folder
+    - Inside the routes folder, create 2 javascript files namely "apiRoute.js" and "htmlRoutes.js"
+    - Populate the data in the .js files
 
   ## Link
 
 [GitHub Link](https://github.com/10-kp/workout-tracker)
+
+[Heroku Link]()
 
 ## License
 
