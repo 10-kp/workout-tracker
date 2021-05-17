@@ -43,6 +43,8 @@ The following steps were undertaken to create this program
   - Create a route folder
     - Inside the routes folder, create 2 javascript files namely "apiRoute.js" and "htmlRoutes.js"
     - Populate the data in the .js files
+  - Create a models folder
+    - Inside the folder, create 2 .js files namely index.js and workout.js
 
   ## Link
 
