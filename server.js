@@ -1,24 +1,27 @@
 //Dependencies
 const express = require('express');
+//middleware - logs all request details
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-//Port
+//Port & heroku
 const PORT = process.env.PORT || 3000;
 
+//Assigning app to express function
 const app = express();
 
-app.use(logger('dev'));
-
+//Middleware that parses json objects and body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//Uses the public folder
 app.use(express.static('public'));
 
-// Connect with MongoDB via mongoose on default port 27017
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/dbExample', {
+// Connect with MongoDB via mongoose. If not, to default port 27017
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false,
 });
 
 // Routes
