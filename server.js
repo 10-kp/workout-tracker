@@ -1,5 +1,6 @@
 //Dependencies
 const express = require('express');
+
 //middleware - logs all request details
 const logger = require('morgan');
 const mongoose = require('mongoose');
