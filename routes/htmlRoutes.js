@@ -1,5 +1,4 @@
 const path = require('path');
-// const express = require('express');
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
@@ -11,7 +10,7 @@ router.get('/exercise', function (req, res) {
 });
 
 router.get('/stats', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/stats/html'));
+  res.sendFile(path.join(__dirname, '../public/stats.html'));
 });
 
 module.exports = router;
