@@ -18,6 +18,9 @@ app.use(express.json());
 //Uses the public folder
 app.use(express.static('public'));
 
+//
+const uri = process.env.MONGODB_URI;
+
 // Connect with MongoDB via mongoose. If not, to default port 27017
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
   useNewUrlParser: true,

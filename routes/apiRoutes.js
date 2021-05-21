@@ -53,8 +53,8 @@ router.get('/api/workouts', (req, res) => {
       },
     },
   ])
-    .then((dbWorkouts) => {
-      res.json(dbWorkouts);
+    .then((data) => {
+      res.json(data);
     })
     .catch((err) => {
       res.json(err);
