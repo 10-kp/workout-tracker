@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Workout = require('../models');
 const path = require('path');
 
-//Info for the workout page - k
+//Info for the workout page
 router.get('/api/workouts', (req, res) => {
   Workout.Workout.find({})
     .then((data) => {
@@ -24,9 +24,17 @@ router.post('/api/workouts', (req, res) => {
     });
 });
 
-//Get the last workout info for range - k
+//Get the last workout info for range
 router.get('/api/workouts/range', (req, res) => {
-  Workout.Workout.find({})
+  Workout.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: {
+          $sum: '$exercises.duration',
+        },
+      },
+    },
+  ])
     .then((data) => {
       res.json(data);
     })
@@ -35,7 +43,25 @@ router.get('/api/workouts/range', (req, res) => {
     });
 });
 
-//Update workouts by id - check
+router.get('/api/workouts', (req, res) => {
+  Workout.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: {
+          $sum: '$exercises.duration',
+        },
+      },
+    },
+  ])
+    .then((dbWorkouts) => {
+      res.json(dbWorkouts);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
+//Update workouts by id
 router.put('/api/workouts/:id', (req, res) => {
   // const id = req.params.id;
   // const body = req.body;

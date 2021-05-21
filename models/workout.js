@@ -12,23 +12,23 @@ const workoutSchema = new Schema({
       type: { type: String, required: 'Choose a workout option' },
       name: {
         type: String,
-        required: 'What is the name of the workout?',
+        // required: 'What is the name of the workout?',
       },
       duration: {
         type: Number,
-        required: 'Number of minutes for the workout?',
+        // required: 'Number of minutes for the workout?',
       },
       weight: {
         type: Number,
-        required: 'What is the desired weight?',
+        // required: 'What is the desired weight?',
       },
       reps: {
         type: Number,
-        required: 'How many reps to do?',
+        // required: 'How many reps to do?',
       },
       sets: {
         type: Number,
-        required: 'How many sets do you want to do?',
+        // required: 'How many sets do you want to do?',
       },
       distance: {
         type: Number,
