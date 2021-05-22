@@ -73,15 +73,4 @@ router.get('/api/workouts/range', (req, res) => {
     });
 });
 
-//Info for the last workout
-// // router.get('/api/workouts', (req, res) => {
-// //   Workout.find({})
-// //     .then((data) => {
-// //       res.json(data);
-// //     })
-// //     .catch((err) => {
-// //       res.status(400).json(err);
-// //     });
-// });
-
 module.exports = router;
