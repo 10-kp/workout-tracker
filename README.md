@@ -1,12 +1,21 @@
 # workout-tracker
 
+[![](https://img.shields.io/badge/javascript-56%25-yellow)]()
+[![](https://img.shields.io/badge/javascript-24%25-blue)]()
+[![](https://img.shields.io/badge/Handlbars-20%25-red)]()
+
 ## Table of Contents
 
+- [Description](#description)
 - [Installation](#installation)
 - [Technologies Used](#technologies)
 - [Steps](#steps)
-- [Link](#Link)
+- [Link](#link)
 - [License](#license)
+
+## Description
+
+A back-end NoSQL fitness tracker app. A user is able to view create, track daily workouts and able to log multiple exercises in a workout on a given day. The user can track the name, type, weight, sets, reps, and duration of exercise. In addition, if the exercise is a cardio exercise, the user is be able to track distance traveled.
 
 ## Installation
 
@@ -45,6 +54,7 @@ The following steps were undertaken to create this program
     - Populate the data in the .js files
   - Create a models folder
     - Inside the folder, create 2 .js files namely index.js and workout.js
+  - Do "npm run start" in VS Code or open the Heroku app.
 
   ## Link
 
