@@ -24,7 +24,7 @@ router.put('/api/workouts/:id', (req, res) => {
     { new: true, runValidators: true }
   )
 
-    .then((dbWorkout) => res.json(data))
+    .then((data) => res.json(data))
     .catch((err) => {
       console.log('error', err);
 
@@ -32,8 +32,8 @@ router.put('/api/workouts/:id', (req, res) => {
     });
 });
 
-//Get the last workout info for range - Ask Inst
-router.get('/api/workouts/range', (req, res) => {
+//Get the last workout info for range
+router.get('/api/workouts', (req, res) => {
   Workout.aggregate([
     {
       $addFields: {
@@ -54,7 +54,15 @@ router.get('/api/workouts/range', (req, res) => {
 // Find all workouts within range
 
 router.get('/api/workouts/range', (req, res) => {
-  Workout.find({})
+  Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: {
+          $sum: '$exercises.duration',
+        },
+      },
+    },
+  ])
     .limit(7)
     .then((data) => res.json(data))
 
@@ -66,14 +74,14 @@ router.get('/api/workouts/range', (req, res) => {
 });
 
 //Info for the last workout
-router.get('/api/workouts', (req, res) => {
-  Workout.find({})
-    .then((data) => {
-      res.json(data);
-    })
-    .catch((err) => {
-      res.status(400).json(err);
-    });
-});
+// // router.get('/api/workouts', (req, res) => {
+// //   Workout.find({})
+// //     .then((data) => {
+// //       res.json(data);
+// //     })
+// //     .catch((err) => {
+// //       res.status(400).json(err);
+// //     });
+// });
 
 module.exports = router;

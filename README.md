@@ -15,7 +15,9 @@
 
 ## Description
 
-A back-end NoSQL fitness tracker app. A user is able to view create, track daily workouts and able to log multiple exercises in a workout on a given day. The user can track the name, type, weight, sets, reps, and duration of exercise. In addition, if the exercise is a cardio exercise, the user is be able to track distance traveled.
+A NoSQL fitness tracker app. A user is able to view create, track daily workouts and able to log multiple exercises in a workout on a given day. The user can track the name, type, weight, sets, reps, and duration of exercise. In addition, if the exercise is a cardio exercise, the user is be able to track distance traveled.
+
+![image](https://github.com/10-kp/workout-tracker/blob/main/assets/ftHome.png?raw=true)
 
 ## Installation
 
